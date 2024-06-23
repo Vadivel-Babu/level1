@@ -5,10 +5,18 @@ import { Modal } from "antd";
 const Summary = ({ isOpen, data, onClose }) => {
   return (
     <Modal title="Summary" open={isOpen} onCancel={onClose}>
-      <p>Name: {data.name}</p>
-      <p>Email: {data.email}</p>
-      <p>Guest Status: {data.isGuest}</p>
-      <p>Guest Name: {data.guestName || "No"}</p>
+      <p>
+        Name: <span className="font-bold"> {data.name}</span>
+      </p>
+      <p>
+        Email: <span className="font-bold">{data.email}</span>{" "}
+      </p>
+      <p>
+        Guest Status: <span className="font-bold">{data.isGuest}</span>{" "}
+      </p>
+      <p>
+        Guest Name: <span className="font-bold">{data.guestName || "No"}</span>{" "}
+      </p>
     </Modal>
   );
 };
